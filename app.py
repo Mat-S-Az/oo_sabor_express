@@ -8,12 +8,15 @@ restaurante_pizza = Restaurante('planet Express', 'Pizzaria')
 restaurante_pizza.receber_avaliacao('zé', 7.5)
 restaurante_praca.receber_avaliacao('Bob', 4)
 cafe1 = Bebida('Mocha', 7.00, 'Large')
+cafe1.aplicar_desconto()
 prato1 = Prato('Risoto', 10.00, 'Risoto à moda gaúcha')
-restaurante_praca.adicionar_bebida_no_cardapio(cafe1)
-restaurante_praca.adicionar_prato_no_cardapio(prato1)
+prato1.aplicar_desconto()
+restaurante_praca.adicionar_no_cardapio(cafe1)
+restaurante_praca.adicionar_no_cardapio(prato1)
 
 def main():
     Restaurante.listar_restaurantes()
+    restaurante_praca.exibir_cardapio
 
 if __name__ == '__main__':
     main()
